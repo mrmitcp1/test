@@ -1,3 +1,3 @@
 function myFunction(){
-    document.getElementById('demo1').inert='bé cũng dược';
+    document.getElementById('demo1').innerHTML='bé cũng dược';
 }
