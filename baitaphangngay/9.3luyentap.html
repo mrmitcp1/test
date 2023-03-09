@@ -5,13 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-<h2>Điểm trung bình 3 môn</h2>
+<h2>Chuyển đổi nhiệt độ</h2>
 <script>
-    inputPhysic = +prompt('Physic');
-    inputMath = +prompt('Math');
-    inputChemistry = +prompt('Chemistry');
-    let Average = (inputPhysic + inputMath + inputChemistry) / 3;
-    document.write('Average is '+ Average)
+    inputCelsius = +prompt('Celsius');
+    let Fahrenheite = inputCelsius * (9 / 5) + 32 ;
+    document.write('Celsius is ' + inputCelsius)
+    document.write('<br/>')
+    document.write('Fahrenheite is '+ Fahrenheite)
 </script>
 </body>
 </html>
