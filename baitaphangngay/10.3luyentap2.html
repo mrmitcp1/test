@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>What is the “official” name of JavaScript?</p>
+<input  type="text" id="question">
+<button onclick="question()" > clickhere </button>
+<p id="answer" ></p>
+<script>
+  function question() {
+
+
+let question = document.getElementById('question').value
+if (question === 'ECMAScrip'){
+  document.getElementById('answer').innerHTML = 'Right'
+} else {
+  document.getElementById('answer').innerHTML = 'No'
+}
+  }
+</script>
+</body>
+</html>
