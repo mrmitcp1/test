@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="number1"> số a <br>
+<input type="number" id="number2"> số b
+<button onclick="sum()">Kết quả</button>
+<script>
+    function sum() {
+        let a = +document.getElementById('number1').value;
+        let b = +document.getElementById('number2').value;
+        let c = a + b;
+        let result = (c < 4) ? 'Below' : 'Over';
+        document.write(result);
+    }
+</script>
+<script>
+    let login = prompt("Enter:");
+    let message = (login == 'Employee') ?
+        'Hello' :
+        (login == 'Director') ?
+            'Greetings' :
+            (login == '') ?
+                'No login' :
+                '';
+    alert(message);
+</script>
+</body>
+</html>
