@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="name" value="Admin" > Tên đăng nhập </input><br>
+<input type="password" id="pass" value="TheMaster" > Password </input><br>
+<button onclick="user()">Enter</button>
+<script>
+    function user() {
+
+        let username = document.getElementById('name').value;
+        // let pass = document.getElementById('pass').value;
+        if (username === 'Admin') {
+            let userpass = document.getElementById('pass').value;
+            if (userpass === 'TheMaster') {
+                document.getElementById('demo').innerHTML = 'Welcome'
+            } else if (userpass === '') {
+                document.getElementById('demo').innerHTML = 'Canceled'
+            } else {
+                document.getElementById('demo').innerHTML = 'Wrong password'
+            }
+        }
+        else if (username ==='') {
+            document.getElementById('demo').innerHTML = 'canceled'
+        } else {
+            document.getElementById('demo').innerHTML = 'I don’t know you'
+        }
+    }
+</script>
+<p id="demo" ></p>
+</body>
+</html>
