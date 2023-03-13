@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <img src="../picture/qua-bong-ro-gerustar-so-5.jpg" height="300" width="350" id="ball"/>
+    <p>Click to run</p>
+    <button id="run" onclick="ballrun()">Click</button>
+
+    <script>
+        let image = document.getElementById('ball');
+
+        function win() {
+
+            image = document.getElementById('ball');
+            image.style.position = 'relative';
+            image.style.left = '0px';
+        }
+
+        function ballrun() {
+
+
+            image.style.left = parseInt(image.style.left) + 10 + 'px';
+        }
+
+        window.onload = win();
+
+    </script>
+
+</body>
+</html>
