@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Chỉ số BMI</h1>
+<input type="number" id="weight" placeholder="weight here(kg)"><br>
+<input type="number" id="hight" placeholder="hight here(m)"><br>
+<br>
+<table border="1" cellspacing="0" width="500">
+    <tr bgcolor="green">
+        <th>BMI</th>
+        <th>Interpretation</th>
+    </tr>
+    <tr>
+        <td>BMI < 18.5</td>
+        <td>Underweight</td>
+    </tr>
+    <tr>
+        <td>18.5 ≤ BMI < 25.0</td>
+        <td>Normal</td>
+    </tr>
+    <tr>
+        <td>25.0 ≤ BMI < 30.0</td>
+        <td>Overweight</td>
+    </tr>
+    <tr>
+        <td>30 ≤ BMI</td>
+        <td>Obese</td>
+    </tr>
+</table>
+<button onclick="bmi()">Click</button>
+<script>
+    function bmi() {
+        let weight = document.getElementById('weight').value;
+        let height = document.getElementById('hight').value;
+        let bmi = weight / (height * height)
+        if (bmi < 18.5) {
+            document.getElementById('demo').innerHTML = 'Underweight'
+        } else if (18.5 <= bmi && bmi < 25) {
+            document.getElementById('demo').innerHTML = 'Normal'
+        } else if (25 <= bmi && bmi < 30) {
+            document.getElementById('demo').innerHTML = 'Overweight'
+        } else document.getElementById('demo').innerHTML = 'Obese'
+    }
+</script>
+<h id="demo"></h>
+</body>
+</html>
