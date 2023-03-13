@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="moneyforbank" placeholder="Tổng số tiền vay">
+<button onclick="money1()">Tiền phải trả hàng tháng</button>
+
+<p id="demo1"></p><br>
+<input type="number" id="Bankinterest" placeholder="Lãi suất hàng tháng %">
+<button onclick="interest1()">Lãi ngân hàng hàng tháng</button>
+
+<p id="demo2"></p><br>
+<input type="number" id="month" placeholder="Vay trong bao nhiêu tháng">
+<button onclick="total()">Tổng tiền phải trả hàng tháng</button>
+
+<p id=demo3></p>
+<script>
+
+
+        function money1() {
+            let money = +document.getElementById('moneyforbank').value
+            let month = +document.getElementById('month').value
+            let moneyofmonth = parseInt(money / month);
+            document.getElementById('demo1').innerHTML = ' Tiền trả hàng tháng ' + moneyofmonth
+        }
+
+        function interest1() {
+            let money = +document.getElementById('moneyforbank').value
+            let interest = +document.getElementById('Bankinterest').value
+            let bankinterest = parseInt(money * (interest / 100) / 12);
+            document.getElementById('demo2').innerHTML = bankinterest
+
+        }
+
+        function total() {
+            let money = +document.getElementById('moneyforbank').value
+            let interest = +document.getElementById('Bankinterest').value
+            let month = +document.getElementById('month').value
+            let moneyofmonth = parseInt(money / month);
+            let bankinterest = parseInt(money / (interest / 100) / 12);
+            let totalmoney = parseInt(moneyofmonth + bankinterest);
+            document.getElementById('demo3').innerHTML = totalmoney
+
+        }
+
+</script>
+</body>
+</html>
