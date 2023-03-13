@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sodien = +prompt(' Số điện tháng này');
+    let tiendien = sodien * 1678;
+    let tiendien2 = (sodien - 50) * 1734 + tiendien;
+    let tiendien3 = (sodien - 100) * 2014 + tiendien2 + tiendien;
+    let tiendien4 = (sodien - 150) * 2534 + tiendien + tiendien2 + tiendien3
+    if (sodien <= 50) {
+        alert('tiền điện tháng này là ' + tiendien)
+    } else if (sodien > 50 && sodien <= 100) {
+        alert('tiền điện tháng này là ' + tiendien2)
+    } else if (sodien > 100 && sodien <= 150) {
+        alert('tiền điện tháng này là ' + tiendien3)
+    } else alert('tiền điện tháng này là ' + tiendien4)
+</script>
+</body>
+</html>
